@@ -1,6 +1,7 @@
 import {Title3} from "@fluentui/react-components";
 import ImageCard from "../../../components/image-card/index.jsx";
 import Carousel from "../../../components/carousel/index.jsx";
+
 const EventList = () => {
 
     const n = 6;
@@ -26,25 +27,29 @@ const EventList = () => {
     return (
         <div className={"flex flex-col gap-2"}>
             <Carousel slides={slides}/>
-            <div className={"flex flex-col gap-2 p-2 px-6"}>
+            <div className={"flex flex-col gap-2 mx-36"}>
+                <div className={"flex flex-col gap-2 p-2 px-6"}>
 
-                <Title3>Previous Events</Title3>
-                <div className={"flex gap-8 overflow-x-scroll justify-start scrollbar-hide rounded-lg"}>
-                    {
-                        [...Array(n)].map((e, i) => (
+                    <Title3>Previous Events</Title3>
+                    <div className={"flex gap-8 overflow-x-scroll justify-start scrollbar-hide rounded-lg"}>
+                        {
+                            [...Array(n)].map((e, i) => (
 
-                            <ImageCard img={"https://images.unsplash.com/photo-1588421357574-87938a86fa28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80"} title={`image ${i}`} handleClick={() => true} key={i}/>
-                        ))
-                    }
+                                <ImageCard
+                                    img={"https://images.unsplash.com/photo-1588421357574-87938a86fa28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80"}
+                                    title={`image ${i}`} handleClick={() => true} key={i}/>
+                            ))
+                        }
+                    </div>
+                </div>
+
+                <div className={"flex flex-col gap-2 p-2 px-6"}>
+
+                    <Title3>Event Calendar</Title3>
+                    <h1 className={"text-2xl text-red-500"}>TO DO!!!!! (khassek tela3 custom component from
+                        scratch)</h1>
                 </div>
             </div>
-
-            <div className={"flex flex-col gap-2 p-2 px-6"}>
-
-                <Title3>Event Calendar</Title3>
-                <h1 className={"text-2xl text-red-500"}>TO DO!!!!! (khassek tela3 custom component from scratch)</h1>
-            </div>
-
 
 
         </div>

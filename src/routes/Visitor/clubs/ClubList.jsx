@@ -1,4 +1,4 @@
-import VerticalCard from "../../components/vertical-card/index.jsx";
+import VerticalCard from "../../../components/vertical-card/index.jsx";
 import {Fragment} from "react";
 import {Button, Title3} from "@fluentui/react-components";
 import {AddCircle24Regular} from "@fluentui/react-icons";
@@ -9,7 +9,7 @@ const ClubList = () => {
     const n = 11;
 
     return (
-        <div className={"flex flex-col gap-10 justify-center"}>
+        <div className={"flex flex-col gap-10 justify-center mx-36"}>
             <div className={"flex flex-wrap justify-center gap-8"}>
                 {
                     [...Array(n)].map((e, i) => (
