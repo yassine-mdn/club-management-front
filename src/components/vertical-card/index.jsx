@@ -40,7 +40,7 @@ const VerticalCard = (props) => {
     return (
         <div className={styles.main}>
             <section className={"w-fit"}>
-                <Card className={"h-52 w-96"} onClick={props.onClick}>
+                <Card className={"h-52 w-96"} onClick={props.handleClick}>
                     <CardHeader
                         image={
                             <img
@@ -69,7 +69,7 @@ VerticalCard.propTypes = {
     icon: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     description: PropTypes.string,
-    onClick : PropTypes.func.isRequired,
+    handleClick : PropTypes.func.isRequired,
     children: PropTypes.element.isRequired,
 
 }

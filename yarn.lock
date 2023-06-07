@@ -1420,6 +1420,11 @@ convert-source-map@^1.7.0:
   resolved "https://registry.npmjs.org/convert-source-map/-/convert-source-map-1.9.0.tgz"
   integrity sha512-ASFBup0Mz1uyiIjANan1jzLQami9z1PoYSZCiiYW2FczPbenXc45FZdBZLzOT+r6+iciuEModtmCti+hjaAk0A==
 
+countdown@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.npmjs.org/countdown/-/countdown-2.6.0.tgz"
+  integrity sha512-96C3ntj6/Q0KiikjRxDTrnw09VHI1x930gDTxBnTN8spEjySAT4ftvPXbM22Wn1pp5X0HvZ9uw6DOIf2d8g7rg==
+
 cross-spawn@^7.0.2:
   version "7.0.3"
   resolved "https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.3.tgz"
@@ -2856,6 +2861,11 @@ tabster@^4.4.2:
   dependencies:
     keyborg "^2.0.0"
     tslib "^2.3.1"
+
+tailwind-scrollbar-hide@^1.1.7:
+  version "1.1.7"
+  resolved "https://registry.npmjs.org/tailwind-scrollbar-hide/-/tailwind-scrollbar-hide-1.1.7.tgz"
+  integrity sha512-X324n9OtpTmOMqEgDUEA/RgLrNfBF/jwJdctaPZDzB3mppxJk7TLIDmOreEDm1Bq4R9LSPu4Epf8VSdovNU+iA==
 
 tailwindcss@^3.3.2:
   version "3.3.2"

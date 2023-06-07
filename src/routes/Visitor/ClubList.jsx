@@ -16,7 +16,7 @@ const ClubList = () => {
                         <Fragment key={i}>
                             <VerticalCard icon={"https://www.uir.ac.ma/assets/_resources/img/logos/logo-color.png"}
                                           title={"Club UIR BDE"}
-                                          onClick={() => (console.log(`khedam hh ${i}`))}
+                                          handleClick={() => (console.log(`khedam hh ${i}`))}
                             >
                                 <div className={"flex flex-col gap-2"}>
                             <span className={"line-clamp-3"}>

@@ -1,5 +1,8 @@
 import Carousel from "../../components/carousel/index.jsx";
 import {Body2, Title1} from "@fluentui/react-components";
+import ImageCard from "../../components/image-card/index.jsx";
+
+
 const Home = () => {
 
     const slides = [
@@ -33,15 +36,7 @@ const Home = () => {
                 <Title1  align={"center"}>Featured Clubs</Title1>
                 <div className={"flex flex-wrap gap-3 lg:gap-8 justify-center"}>
                     {slides.map(slide => (
-                        <div key={slide.url} className={"h-32  lg:h-56 xl:h-64 aspect-video object-cover  rounded-lg shadow-sm relative group"}>
-                            <div
-                                style={{ backgroundImage: `url(${slide.url})` }}
-                                className={"h-full w-full bg-center bg-cover  rounded-lg "}>
-                            </div>
-                            <div className='hidden  absolute top-0 h-full w-full  bg-black/30  rounded-lg group-hover:flex justify-center items-center cursor-pointer text-white'>
-                                <span className={"font-semibold text-lg"}> test </span>
-                            </div>
-                        </div>
+                        <ImageCard key={slide.url}  handleClick={() => console.log("khedam")} title={"test title"} img={slide.url}/>
 
                     ))}
                 </div>
