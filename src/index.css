@@ -2,3 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+
+    .activeLink {
+        @apply h-12 mx-2 mr-4 flex justify-start items-center pl-16 px-8 rounded-md bg-blue-300 hover:bg-gray-300 font-semibold text-xl
+    }
+
+    .normalLink {
+        @apply h-12 mx-2 mr-4 flex justify-start items-center pl-16 gap-2 px-8 rounded-md hover:bg-gray-300 text-xl
+    }
+
+}
