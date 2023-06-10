@@ -1,9 +1,9 @@
 import {Fragment} from "react";
-import VerticalCard from "../../components/vertical-card/index.jsx";
+import VerticalCard from "../../../components/vertical-card/index.jsx";
 import {Input} from "@fluentui/react-components";
 import {Search20Filled} from "@fluentui/react-icons";
 
-const PendingClubs = () => {
+const PendingEvents = () => {
     return (
         <div className={"flex flex-col gap-4 h-full max-w-[80rem] overflow-y-scroll scrollbar-hide mx-auto"}>
             <div className={"mx-3 flex justify-between"}>
@@ -18,6 +18,7 @@ const PendingClubs = () => {
                         <Fragment key={i}>
                             <VerticalCard icon={"https://www.uir.ac.ma/assets/_resources/img/logos/logo-color.png"}
                                           title={"Club UIR BDE"}
+                                          description={"01/01/2001"}
                                           handleClick={() => (console.log(`khedam hh ${i}`))}
                             >
                                 <div className={"flex flex-col gap-2 justify-between h-full"}>
@@ -39,4 +40,4 @@ const PendingClubs = () => {
     );
 };
 
-export default PendingClubs;
+export default PendingEvents;

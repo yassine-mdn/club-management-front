@@ -1,5 +1,5 @@
 import {Button, Subtitle1, Title1, Title3} from "@fluentui/react-components";
-import FileCard from "../../components/file-card/index.jsx";
+import FileCard from "../../../components/file-card/index.jsx";
 
 
 
