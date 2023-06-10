@@ -5,7 +5,7 @@ import {useState} from "react";
 import PropTypes from "prop-types";
 
 
-const Carousel = ({slides}) => {
+const Carousel = ({slides,handleClick}) => {
 
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -31,6 +31,7 @@ const Carousel = ({slides}) => {
             <div
                 style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
                 className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
+                onClick={handleClick}
             ></div>
             {/* Left Arrow */}
             <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5  rounded-full p-2 bg-black/20 text-white cursor-pointer'>
@@ -57,7 +58,8 @@ const Carousel = ({slides}) => {
 
 Carousel.propTypes = {
     slides : PropTypes.arrayOf( PropTypes.shape({
-        url: PropTypes.string.isRequired
+        url: PropTypes.string.isRequired,
+        handleClick : PropTypes.func,
     })).isRequired
 };
 export default Carousel;

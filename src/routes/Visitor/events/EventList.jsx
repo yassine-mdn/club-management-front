@@ -1,47 +1,64 @@
-import {Title3} from "@fluentui/react-components";
+import {Spinner, Title3} from "@fluentui/react-components";
 import ImageCard from "../../../components/image-card/index.jsx";
 import Carousel from "../../../components/carousel/index.jsx";
+import {useQuery} from "@tanstack/react-query";
+import axios from "axios";
+import {useNavigate} from "react-router-dom";
 
 const EventList = () => {
 
-    const n = 6;
-    const slides = [
-        {
-            url: "https://www.uir.ac.ma/upload/cbuilder/3187e7e694ad3a3f24f79f2301a9b8c84118b31c.jpeg",
-        },
-        {
-            url: "https://www.uir.ac.ma/upload/cbuilder/8ea2e817f862b5794f543d21080eb9a77941d66a.jpeg",
-        },
-        {
-            url: "https://www.uir.ac.ma/upload/cbuilder/3187e7e694ad3a3f24f79f2301a9b8c84118b31c.jpeg",
-        },
+    const navigate = useNavigate();
 
-        {
-            url: "https://www.uir.ac.ma/upload/cbuilder/8ea2e817f862b5794f543d21080eb9a77941d66a.jpeg",
-        },
-        {
-            url: "https://www.uir.ac.ma/upload/cbuilder/3187e7e694ad3a3f24f79f2301a9b8c84118b31c.jpeg",
-        },
-    ];
+    const eventList = useQuery({
+            queryKey: ['getEventPage'],
+            queryFn: () => axios.get("http://localhost:8080/api/v1/events", {
+                params: {
+                    pageNumber: 1,
+                    pageSize: 5
+                }
+            })
+        }
+    )
+
+    const featuredEvents = useQuery({
+            queryKey: ['getEventFeatured'],
+            queryFn: () => axios.get("http://localhost:8080/api/v1/events", {
+                params: {
+                    pageNumber: 0,
+                    pageSize: 3
+                }
+            })
+        }
+    )
+
 
     return (
         <div className={"flex flex-col gap-2"}>
-            <Carousel slides={slides}/>
+            {featuredEvents.isSuccess ?
+                <Carousel slides={featuredEvents.data?.data.map(details => ({url: details?.cover}))}
+                          handleClick={() => true}/>
+                :
+                <Spinner/>
+            }
             <div className={"flex flex-col gap-2 mx-36"}>
-                <div className={"flex flex-col gap-2 p-2 px-6"}>
+                {eventList.isSuccess ?
+                    <div className={"flex flex-col gap-2 p-2 px-6"}>
 
-                    <Title3>Previous Events</Title3>
-                    <div className={"flex gap-8 overflow-x-scroll justify-start scrollbar-hide rounded-lg"}>
-                        {
-                            [...Array(n)].map((e, i) => (
+                        <Title3>Previous Events</Title3>
+                        <div className={"flex gap-8 overflow-x-scroll justify-start scrollbar-hide rounded-lg"}>
+                            {
+                                eventList.data?.data.map((details)=> (
 
-                                <ImageCard
-                                    img={"https://images.unsplash.com/photo-1588421357574-87938a86fa28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80"}
-                                    title={`image ${i}`} handleClick={() => true} key={i}/>
-                            ))
-                        }
+                                    <ImageCard
+                                        img={details?.cover}
+                                        title={details?.name} handleClick={() => navigate(`${details?.idEvent}`)} key={details?.idEvent}/>
+                                ))
+                            }
+                        </div>
                     </div>
-                </div>
+                    :
+                    <Spinner/>
+                }
 
                 <div className={"flex flex-col gap-2 p-2 px-6"}>
 

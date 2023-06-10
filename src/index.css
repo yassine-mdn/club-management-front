@@ -12,4 +12,12 @@
         @apply h-12 mx-2 mr-4 flex justify-start items-center pl-16 gap-2 px-8 rounded-md hover:bg-gray-300 text-xl
     }
 
+    .active-nav{
+        @apply font-semibold text-xl flex justify-center w-fit items-center px-4 p-2 rounded-md bg-gray-300/60 hover:bg-gray-100/60
+    }
+
+    .normal-nav{
+        @apply text-xl  flex justify-center items-center w-fit p-2  px-4 rounded-md hover:bg-gray-100/60
+    }
+
 }

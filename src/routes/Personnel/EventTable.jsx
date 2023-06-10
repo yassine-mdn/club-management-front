@@ -75,15 +75,21 @@ const columns = [
         },
     }),
     createTableColumn({
-        columnId: "president",
+        columnId: "description",
         compare: (a, b) => {
             return a.author.label.localeCompare(b.author.label);
         },
     }),
     createTableColumn({
-        columnId: "type",
+        columnId: "organisateur",
         compare: (a, b) => {
             return a.lastUpdated.timestamp - b.lastUpdated.timestamp;
+        },
+    }),
+    createTableColumn({
+        columnId: "date",
+        compare: (a, b) => {
+            return a.lastUpdate.label.localeCompare(b.lastUpdate.label);
         },
     }),
     createTableColumn({
@@ -92,14 +98,8 @@ const columns = [
             return a.lastUpdate.label.localeCompare(b.lastUpdate.label);
         },
     }),
-    createTableColumn({
-        columnId: "budget",
-        compare: (a, b) => {
-            return a.lastUpdate.label.localeCompare(b.lastUpdate.label);
-        },
-    }),
 ];
-const ClubTable = () => {
+const EventTable = () => {
 
     const [sortState, setSortState] = React.useState({
         sortDirection: "ascending",
@@ -140,17 +140,17 @@ const ClubTable = () => {
                     <TableHeader>
                         <TableRow>
                             <TableHeaderCell {...headerSortProps("name")}>Name</TableHeaderCell>
-                            <TableHeaderCell {...headerSortProps("president")}>
-                                President
+                            <TableHeaderCell {...headerSortProps("description")}>
+                                Description
                             </TableHeaderCell>
-                            <TableHeaderCell {...headerSortProps("type")}>
-                                Type
+                            <TableHeaderCell {...headerSortProps("organisateur")}>
+                                Organiser
+                            </TableHeaderCell>
+                            <TableHeaderCell {...headerSortProps("date")}>
+                                Date
                             </TableHeaderCell>
                             <TableHeaderCell {...headerSortProps("status")}>
                                 Status
-                            </TableHeaderCell>
-                            <TableHeaderCell {...headerSortProps("budget")}>
-                                Budget
                             </TableHeaderCell>
                         </TableRow>
                     </TableHeader>
@@ -195,4 +195,4 @@ const ClubTable = () => {
     );
 };
 
-export default ClubTable;
+export default EventTable;

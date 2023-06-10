@@ -276,12 +276,64 @@
   dependencies:
     "@floating-ui/core" "^1.2.6"
 
+"@fluentui/date-time-utilities@^8.5.12":
+  version "8.5.12"
+  resolved "https://registry.npmjs.org/@fluentui/date-time-utilities/-/date-time-utilities-8.5.12.tgz"
+  integrity sha512-N4Dt7MDJiEASF73hz1kWkNfGLdGa+joi+f1b5Pi57PI4SBpZ89OGumT+Z/iyuYwcTdz5aVeq03wTJkLdJQo2Gg==
+  dependencies:
+    "@fluentui/set-version" "^8.2.11"
+    tslib "^2.1.0"
+
+"@fluentui/dom-utilities@^2.2.11":
+  version "2.2.11"
+  resolved "https://registry.npmjs.org/@fluentui/dom-utilities/-/dom-utilities-2.2.11.tgz"
+  integrity sha512-2tXfg7/9PXu9nfU72/P3o3waHEFEQtHUfQbVexUaYqNNAxMj6sOfsqpUx4vd5nPgO+grSWrl+spqlLN2yej51w==
+  dependencies:
+    "@fluentui/set-version" "^8.2.11"
+    tslib "^2.1.0"
+
+"@fluentui/font-icons-mdl2@^8.5.21":
+  version "8.5.21"
+  resolved "https://registry.npmjs.org/@fluentui/font-icons-mdl2/-/font-icons-mdl2-8.5.21.tgz"
+  integrity sha512-B4w1jx/gNxDI/AbVwZtmcvb/5lG8HngWVwsDDtP2ZM4HEFZduY1XrQMak5mP1O9lTEpQKD+kv+uK70ocsfpUig==
+  dependencies:
+    "@fluentui/set-version" "^8.2.11"
+    "@fluentui/style-utilities" "^8.9.14"
+    "@fluentui/utilities" "^8.13.16"
+    tslib "^2.1.0"
+
+"@fluentui/foundation-legacy@^8.2.41":
+  version "8.2.41"
+  resolved "https://registry.npmjs.org/@fluentui/foundation-legacy/-/foundation-legacy-8.2.41.tgz"
+  integrity sha512-HgLWOjNwC0FkV9kN283E8AzGmswFJbu7AKQ+cyefPnOUdH3iopD2oW7Lqz7QBzIPgMV/8FHE+nCa2ZEbhvFPGg==
+  dependencies:
+    "@fluentui/merge-styles" "^8.5.12"
+    "@fluentui/set-version" "^8.2.11"
+    "@fluentui/style-utilities" "^8.9.14"
+    "@fluentui/utilities" "^8.13.16"
+    tslib "^2.1.0"
+
+"@fluentui/keyboard-key@^0.4.11":
+  version "0.4.11"
+  resolved "https://registry.npmjs.org/@fluentui/keyboard-key/-/keyboard-key-0.4.11.tgz"
+  integrity sha512-TVB/EloWado9AVp1niChgcdDOQAHGP5B30Dinmtfe7zi8OnstwPoxwFP6dHJDdpLQ6ZEUTaEHViSzvewl7Chag==
+  dependencies:
+    tslib "^2.1.0"
+
 "@fluentui/keyboard-keys@^9.0.3":
   version "9.0.3"
   resolved "https://registry.npmjs.org/@fluentui/keyboard-keys/-/keyboard-keys-9.0.3.tgz"
   integrity sha512-40KBVJ9HzsvmPL3rwYaAvxCacNS0xnTmOt6TLxxrAVgVrZ1X7DLgd8OGFZcWROs0dhHdCk2D51bl4nK8Q1r3mQ==
   dependencies:
     "@swc/helpers" "^0.4.14"
+
+"@fluentui/merge-styles@^8.5.12":
+  version "8.5.12"
+  resolved "https://registry.npmjs.org/@fluentui/merge-styles/-/merge-styles-8.5.12.tgz"
+  integrity sha512-ZnUo0YuMP7AYi68dkknFqVxopIAgbrUnqR/MZlemmRvBYyy1SMj1WQeHcoiLFA8mF8YKn7B+jxQgJbN2bfcrRw==
+  dependencies:
+    "@fluentui/set-version" "^8.2.11"
+    tslib "^2.1.0"
 
 "@fluentui/priority-overflow@^9.0.3":
   version "9.0.3"
@@ -541,6 +593,37 @@
     "@griffel/react" "^1.5.7"
     "@swc/helpers" "^0.4.14"
 
+"@fluentui/react-file-type-icons@^8.8.21":
+  version "8.8.21"
+  resolved "https://registry.npmjs.org/@fluentui/react-file-type-icons/-/react-file-type-icons-8.8.21.tgz"
+  integrity sha512-R4sN2ESLok7RvvD8vV8vJi5pN0y7bqHs7HMOOoQDZk0oOhmPY7bYloKLqyeXzageGVhf7yqu9Lyd9psdmU3IWg==
+  dependencies:
+    "@fluentui/set-version" "^8.2.11"
+    "@fluentui/style-utilities" "^8.9.14"
+    tslib "^2.1.0"
+
+"@fluentui/react-focus@^8.8.28":
+  version "8.8.28"
+  resolved "https://registry.npmjs.org/@fluentui/react-focus/-/react-focus-8.8.28.tgz"
+  integrity sha512-gdBASqKW41tWnrNj3B3WQqYGXqnPOGZvQz9AILCY4g1oWv2QoQV1xRhVmzu6V/vJzUZDqOVyD/RseumGmIh8Yg==
+  dependencies:
+    "@fluentui/keyboard-key" "^0.4.11"
+    "@fluentui/merge-styles" "^8.5.12"
+    "@fluentui/set-version" "^8.2.11"
+    "@fluentui/style-utilities" "^8.9.14"
+    "@fluentui/utilities" "^8.13.16"
+    tslib "^2.1.0"
+
+"@fluentui/react-hooks@^8.6.27":
+  version "8.6.27"
+  resolved "https://registry.npmjs.org/@fluentui/react-hooks/-/react-hooks-8.6.27.tgz"
+  integrity sha512-4Thtr8LgM3/aGExWrIFtTfPX1sHirPTD9DxEkD2/GOPniN/dFBKYp0q1eyMkRu2/KXV6HUVyQL9hK+yfD9sIQQ==
+  dependencies:
+    "@fluentui/react-window-provider" "^2.2.15"
+    "@fluentui/set-version" "^8.2.11"
+    "@fluentui/utilities" "^8.13.16"
+    tslib "^2.1.0"
+
 "@fluentui/react-icons@^2.0.196", "@fluentui/react-icons@^2.0.203":
   version "2.0.203"
   resolved "https://registry.npmjs.org/@fluentui/react-icons/-/react-icons-2.0.203.tgz"
@@ -683,6 +766,13 @@
     "@fluentui/react-theme" "^9.1.8"
     "@fluentui/react-utilities" "^9.9.2"
     "@griffel/react" "^1.5.7"
+    "@swc/helpers" "^0.4.14"
+
+"@fluentui/react-portal-compat-context@^9.0.6":
+  version "9.0.6"
+  resolved "https://registry.npmjs.org/@fluentui/react-portal-compat-context/-/react-portal-compat-context-9.0.6.tgz"
+  integrity sha512-HUt0/YXKRB4chtzlGbZ+7y7FHFyqaI0CeMFAe/QBXVOiOwA01QOr2j4Uky+30vupspIt6mjodLanuw1jMybmqQ==
+  dependencies:
     "@swc/helpers" "^0.4.14"
 
 "@fluentui/react-portal@^9.2.12":
@@ -995,12 +1085,79 @@
     "@griffel/react" "^1.5.7"
     "@swc/helpers" "^0.4.14"
 
+"@fluentui/react-window-provider@^2.2.15":
+  version "2.2.15"
+  resolved "https://registry.npmjs.org/@fluentui/react-window-provider/-/react-window-provider-2.2.15.tgz"
+  integrity sha512-RraWvRe7wakpPJRBX2tlCV/cybOKiqLJ1UBLPNf5xq7ZIs0T0g/hh3G3Zb5teOeipjuRnl6srkdDUT9Dy9wrBg==
+  dependencies:
+    "@fluentui/set-version" "^8.2.11"
+    tslib "^2.1.0"
+
+"@fluentui/react@^8.110.2":
+  version "8.110.2"
+  resolved "https://registry.npmjs.org/@fluentui/react/-/react-8.110.2.tgz"
+  integrity sha512-xCAUaKs20LlhHHeNba+Vkq28xfkWnzHcWrXtiFFt2q9fKo8QnlnLdrqmmVKAcMH59lxH5o2I1CkMa+6zpE30iA==
+  dependencies:
+    "@fluentui/date-time-utilities" "^8.5.12"
+    "@fluentui/font-icons-mdl2" "^8.5.21"
+    "@fluentui/foundation-legacy" "^8.2.41"
+    "@fluentui/merge-styles" "^8.5.12"
+    "@fluentui/react-focus" "^8.8.28"
+    "@fluentui/react-hooks" "^8.6.27"
+    "@fluentui/react-portal-compat-context" "^9.0.6"
+    "@fluentui/react-window-provider" "^2.2.15"
+    "@fluentui/set-version" "^8.2.11"
+    "@fluentui/style-utilities" "^8.9.14"
+    "@fluentui/theme" "^2.6.32"
+    "@fluentui/utilities" "^8.13.16"
+    "@microsoft/load-themed-styles" "^1.10.26"
+    tslib "^2.1.0"
+
+"@fluentui/set-version@^8.2.11":
+  version "8.2.11"
+  resolved "https://registry.npmjs.org/@fluentui/set-version/-/set-version-8.2.11.tgz"
+  integrity sha512-UI03tysau/adBO1a3q4uFZWQ3lfkiFcAWIFng4k5odWcCokfCm5IxA0urKqj5W5JRYdyoBUaq8QbcNGkFB4dCw==
+  dependencies:
+    tslib "^2.1.0"
+
+"@fluentui/style-utilities@^8.9.14":
+  version "8.9.14"
+  resolved "https://registry.npmjs.org/@fluentui/style-utilities/-/style-utilities-8.9.14.tgz"
+  integrity sha512-On48B9biXgV6PgimFdSwRuYLzue9PjwqxT31UP3w5uvwANL+Hqile5AbkR5g9RartoJiDIk1bHAP7QQkqI1jEg==
+  dependencies:
+    "@fluentui/merge-styles" "^8.5.12"
+    "@fluentui/set-version" "^8.2.11"
+    "@fluentui/theme" "^2.6.32"
+    "@fluentui/utilities" "^8.13.16"
+    "@microsoft/load-themed-styles" "^1.10.26"
+    tslib "^2.1.0"
+
+"@fluentui/theme@^2.6.32":
+  version "2.6.32"
+  resolved "https://registry.npmjs.org/@fluentui/theme/-/theme-2.6.32.tgz"
+  integrity sha512-UkDsCdQQTQb7Ib+tux2Octz3opTvnRDknXoVnC6yluQVd6ugM8eWDUphOgB7Vnsf1Ou7EhPKdIN6OHXHXuoIyA==
+  dependencies:
+    "@fluentui/merge-styles" "^8.5.12"
+    "@fluentui/set-version" "^8.2.11"
+    "@fluentui/utilities" "^8.13.16"
+    tslib "^2.1.0"
+
 "@fluentui/tokens@1.0.0-alpha.5":
   version "1.0.0-alpha.5"
   resolved "https://registry.npmjs.org/@fluentui/tokens/-/tokens-1.0.0-alpha.5.tgz"
   integrity sha512-4xCNP/tmeDywmo+PoFqDaUADSvNNzoZHVknC4D77S1RWxVuYmcM15eumKcVRrDuW3wS8eEX4/ZsIlDfqAhnU8g==
   dependencies:
     "@swc/helpers" "^0.4.14"
+
+"@fluentui/utilities@^8.13.16":
+  version "8.13.16"
+  resolved "https://registry.npmjs.org/@fluentui/utilities/-/utilities-8.13.16.tgz"
+  integrity sha512-NAz7892Fjf4SNj7QCXuL/WGaZHc5GfCkT2trRFAhduSDXTib1dFANmS/yH2u9dH+27WAtu9pD9p9KbEhrWK4MQ==
+  dependencies:
+    "@fluentui/dom-utilities" "^2.2.11"
+    "@fluentui/merge-styles" "^8.5.12"
+    "@fluentui/set-version" "^8.2.11"
+    tslib "^2.1.0"
 
 "@griffel/core@^1.11.0":
   version "1.11.0"
@@ -1077,6 +1234,11 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
+"@microsoft/load-themed-styles@^1.10.26":
+  version "1.10.295"
+  resolved "https://registry.npmjs.org/@microsoft/load-themed-styles/-/load-themed-styles-1.10.295.tgz"
+  integrity sha512-W+IzEBw8a6LOOfRJM02dTT7BDZijxm+Z7lhtOAz1+y9vQm1Kdz9jlAO+qCEKsfxtUOmKilW8DIRqFw2aUgKeGg==
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz"
@@ -1109,6 +1271,40 @@
   integrity sha512-4C7nX/dvpzB7za4Ql9K81xK3HPxCpHMgwTZVyf+9JQ6VUbn9jjZVN7/Nkdz/Ugzs2CSjqnL/UPXroiVBVHUWUw==
   dependencies:
     tslib "^2.4.0"
+
+"@tanstack/eslint-plugin-query@^4.29.9":
+  version "4.29.9"
+  resolved "https://registry.npmjs.org/@tanstack/eslint-plugin-query/-/eslint-plugin-query-4.29.9.tgz"
+  integrity sha512-JlIZcs+zhl/ihta49iIbMCf3E8tSvGDqMIH+oItnYLOzWI7oiujXu7FYgna2E1V79KhR0PaxkPX6jHZLpvacgw==
+
+"@tanstack/match-sorter-utils@^8.7.0":
+  version "8.8.4"
+  resolved "https://registry.npmjs.org/@tanstack/match-sorter-utils/-/match-sorter-utils-8.8.4.tgz"
+  integrity sha512-rKH8LjZiszWEvmi01NR72QWZ8m4xmXre0OOwlRGnjU01Eqz/QnN+cqpty2PJ0efHblq09+KilvyR7lsbzmXVEw==
+  dependencies:
+    remove-accents "0.4.2"
+
+"@tanstack/query-core@4.29.11":
+  version "4.29.11"
+  resolved "https://registry.npmjs.org/@tanstack/query-core/-/query-core-4.29.11.tgz"
+  integrity sha512-8C+hF6SFAb/TlFZyS9FItgNwrw4PMa7YeX+KQYe2ZAiEz6uzg6yIr+QBzPkUwZ/L0bXvGd1sufTm3wotoz+GwQ==
+
+"@tanstack/react-query-devtools@^4.29.12":
+  version "4.29.12"
+  resolved "https://registry.npmjs.org/@tanstack/react-query-devtools/-/react-query-devtools-4.29.12.tgz"
+  integrity sha512-ug4YGQhMhh6QI8/sWJhjXxuvdeehxf1cyxpTifGMH5qreQ5ECHT6vzqG/aKvADQDzqLBGrF0q4wTDnRRYvvtrA==
+  dependencies:
+    "@tanstack/match-sorter-utils" "^8.7.0"
+    superjson "^1.10.0"
+    use-sync-external-store "^1.2.0"
+
+"@tanstack/react-query@^4.29.12", "@tanstack/react-query@4.29.12":
+  version "4.29.12"
+  resolved "https://registry.npmjs.org/@tanstack/react-query/-/react-query-4.29.12.tgz"
+  integrity sha512-zhcN6+zF6cxprxhTHQajHGlvxgK8npnp9uLe9yaWhGc6sYcPWXzyO4raL4HomUzQOPzu3jLvkriJQ7BOrDM8vA==
+  dependencies:
+    "@tanstack/query-core" "4.29.11"
+    use-sync-external-store "^1.2.0"
 
 "@types/prop-types@*":
   version "15.7.5"
@@ -1419,6 +1615,13 @@ convert-source-map@^1.7.0:
   version "1.9.0"
   resolved "https://registry.npmjs.org/convert-source-map/-/convert-source-map-1.9.0.tgz"
   integrity sha512-ASFBup0Mz1uyiIjANan1jzLQami9z1PoYSZCiiYW2FczPbenXc45FZdBZLzOT+r6+iciuEModtmCti+hjaAk0A==
+
+copy-anything@^3.0.2:
+  version "3.0.5"
+  resolved "https://registry.npmjs.org/copy-anything/-/copy-anything-3.0.5.tgz"
+  integrity sha512-yCEafptTtb4bk7GLEQoM8KVJpxAfdBJYaXyzQEgQQQgYrZiDp8SJmGKlYza6CYjEDNstAdNdKA3UuoULlEbS6w==
+  dependencies:
+    is-what "^4.1.8"
 
 countdown@^2.6.0:
   version "2.6.0"
@@ -2163,6 +2366,11 @@ is-weakref@^1.0.2:
   dependencies:
     call-bind "^1.0.2"
 
+is-what@^4.1.8:
+  version "4.1.15"
+  resolved "https://registry.npmjs.org/is-what/-/is-what-4.1.15.tgz"
+  integrity sha512-uKua1wfy3Yt+YqsD6mTUEa2zSi3G1oPlqTflgaPJ7z63vUGN5pxFpnQfeSLMFnJDEsdvOtkp1rUWkYjB4YfhgA==
+
 isexe@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz"
@@ -2293,6 +2501,11 @@ minimatch@^3.0.4, minimatch@^3.0.5, minimatch@^3.1.1, minimatch@^3.1.2:
   integrity sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==
   dependencies:
     brace-expansion "^1.1.7"
+
+moment@^2.29.4:
+  version "2.29.4"
+  resolved "https://registry.npmjs.org/moment/-/moment-2.29.4.tgz"
+  integrity sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==
 
 ms@2.1.2:
   version "2.1.2"
@@ -2560,7 +2773,7 @@ queue-microtask@^1.2.2:
   resolved "https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
-react-dom@^18.2.0, react-dom@>=16.8, "react-dom@>=16.8.0 <19.0.0":
+"react-dom@^16.8.0 || ^17.0.0 || ^18.0.0", react-dom@^18.2.0, react-dom@>=16.8, "react-dom@>=16.8.0 <19.0.0":
   version "18.2.0"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
@@ -2609,7 +2822,7 @@ react-router@6.12.0:
   dependencies:
     "@remix-run/router" "1.6.3"
 
-react@^18.2.0, react@>=16.8, "react@>=16.8.0 <19.0.0":
+"react@^16.8.0 || ^17.0.0 || ^18.0.0", react@^18.2.0, react@>=16.8, "react@>=16.8.0 <19.0.0":
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
@@ -2643,6 +2856,11 @@ regexp.prototype.flags@^1.4.3:
     call-bind "^1.0.2"
     define-properties "^1.2.0"
     functions-have-names "^1.2.3"
+
+remove-accents@0.4.2:
+  version "0.4.2"
+  resolved "https://registry.npmjs.org/remove-accents/-/remove-accents-0.4.2.tgz"
+  integrity sha512-7pXIJqJOq5tFgG1A2Zxti3Ht8jJF337m4sowbuHsW30ZnkQFnDzy9qBNhgzX8ZLW4+UBcXiiR7SwR6pokHsxiA==
 
 resolve-from@^4.0.0:
   version "4.0.0"
@@ -2835,6 +3053,13 @@ sucrase@^3.32.0:
     pirates "^4.0.1"
     ts-interface-checker "^0.1.9"
 
+superjson@^1.10.0:
+  version "1.12.3"
+  resolved "https://registry.npmjs.org/superjson/-/superjson-1.12.3.tgz"
+  integrity sha512-0j+U70KUtP8+roVPbwfqkyQI7lBt7ETnuA7KXbTDX3mCKiD/4fXs2ldKSMdt0MCfpTwiMxo20yFU3vu6ewETpQ==
+  dependencies:
+    copy-anything "^3.0.2"
+
 supports-color@^5.3.0:
   version "5.5.0"
   resolved "https://registry.npmjs.org/supports-color/-/supports-color-5.5.0.tgz"
@@ -2987,6 +3212,11 @@ use-disposable@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/use-disposable/-/use-disposable-1.0.1.tgz"
   integrity sha512-5Sle1XEmK3lw3xyGqeIY7UKkiUgF+TxwUty7fTsqM5D5AxfQfo2ft+LY9xKCA+W5YbaBFbOkWfQsZY/y5JhInA==
+
+use-sync-external-store@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.npmjs.org/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz"
+  integrity sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==
 
 util-deprecate@^1.0.2:
   version "1.0.2"
