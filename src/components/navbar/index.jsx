@@ -1,5 +1,6 @@
 import {useState} from "react";
 import {Button} from "@fluentui/react-components";
+import {NavLink} from "react-router-dom";
 
 const NavBar = () => {
 
@@ -7,9 +8,16 @@ const NavBar = () => {
 
     return (
 
-        <nav className="flex items-center justify-between flex-wrap p-4 h-16 shadow-lg bg-white/60 backdrop-blur-lg fixed top-0 w-full z-50">
+        <nav className="flex items-center justify-between flex-wrap p-1 px-12 h-16 shadow-lg bg-white/60 backdrop-blur-lg fixed top-0 w-full z-50">
             <div className="flex items-center flex-shrink-0 text-white mr-6 lg:mr-72">
-                <h1 className={"text-red-500"}>logo</h1>
+                <NavLink to={"/"}>
+                    <img
+                        alt={"logo"}
+                        className={" h-12 w-12 rounded-md"}
+                        src={"https://www.uir.ac.ma/assets/_resources/img/logos/logo-color.png"}
+                    />
+                </NavLink>
+
             </div>
             <div className="block lg:hidden">
                 <button
@@ -35,21 +43,20 @@ const NavBar = () => {
             <div
                 className={`w-screen block flex-grow lg:flex lg:items-center lg:w-auto ${isOpen ? "block" : "hidden"}`}
             >
-                <div className="text-sm lg:flex-grow">
-                    <a href="#" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4">
-                        First Link
-                    </a>
-                    <a href="#" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4">
-                        Second Link
-                    </a>
-                    <a href="#" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4">
-                        Third Link
-                    </a>
-                    <a href="#" className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4">
-                        Fourth Link
-                    </a>
+                <div className="text-sm flex gap-4">
+                    <NavLink to={"/clubs"} className={({isActive}) => (isActive ? 'active-nav' : 'normal-nav')}>
+                        <span>
+                            clubs
+                        </span>
+                    </NavLink>
+                    <NavLink to={"/events"} className={({isActive}) => (isActive ? 'active-nav' : 'normal-nav')}>
+                        <span>
+                            Events
+                        </span>
+                    </NavLink>
+
                 </div>
-                <div>
+                <div className={"ml-auto"}>
                     <Button appearance="primary"> Click me</Button>
                 </div>
             </div>

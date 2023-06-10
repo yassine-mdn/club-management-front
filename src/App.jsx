@@ -7,6 +7,11 @@ import EventList from "./routes/Visitor/events/EventList.jsx";
 import EventDetails from "./routes/Visitor/events/EventDetails.jsx";
 import ClubDetails from "./routes/Visitor/clubs/ClubDetails.jsx";
 import PersonnelContainer from "./routes/Personnel/PersonnelContainer.jsx";
+import ClubTable from "./routes/Personnel/ClubTable.jsx";
+import EventTable from "./routes/Personnel/EventTable.jsx";
+import PendingClubs from "./routes/Personnel/PendingClubs.jsx";
+import PendingEvents from "./routes/Personnel/PendingEvents.jsx";
+import ClubDetailsPers from "./routes/Personnel/ClubDetailsPers.jsx";
 
 
 function App() {
@@ -25,8 +30,23 @@ function App() {
                     <Route path={":id"} element={<EventDetails/>}/>
                 </Route>
             </Route>
-            <Route path={"/admin"}>
-                <Route index element={<PersonnelContainer/>}/>
+            <Route path={"/admin"} element={<PersonnelContainer/>}>
+                <Route path={"club-list"}>
+                    <Route index element={<ClubTable/>}/>
+                    <Route path={":id"} element={<ClubDetailsPers/>}/>
+                </Route>
+                <Route path={"pending-clubs"} >
+                    <Route index element={<PendingClubs/>}/>
+                    <Route path={":id"} element={<ClubDetailsPers/>}/>
+                </Route>
+                <Route path={"event-list"}>
+                    <Route index element={<EventTable/>}/>
+
+                </Route>
+                <Route path={"pending-events"}>
+                    <Route index element={<PendingEvents/>}/>
+
+                </Route>
             </Route>
         </Routes>
     )
