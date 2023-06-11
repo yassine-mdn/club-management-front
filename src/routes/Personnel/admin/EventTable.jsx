@@ -23,83 +23,83 @@ import {
     DocumentPdfRegular,
     VideoRegular,
 } from "@fluentui/react-icons";
+import {useNavigate} from "react-router-dom";
+import {useEffect, useState} from "react";
+import axios from "axios";
+import moment from "moment";
 
-const items = [
-    {
-        file: { label: "Meeting notes", icon: <DocumentRegular /> },
-        author: { label: "Max Mustermann", status: "available" },
-        lastUpdated: { label: "7h ago", timestamp: 3 },
-        lastUpdate: {
-            label: "You edited this",
-            icon: <EditRegular />,
-        },
-        budget : 10,
-    },
-    {
-        file: { label: "Thursday presentation", icon: <FolderRegular /> },
-        author: { label: "Erika Mustermann", status: "busy" },
-        lastUpdated: { label: "Yesterday at 1:45 PM", timestamp: 2 },
-        lastUpdate: {
-            label: "You recently opened this",
-            icon: <OpenRegular />,
-        },
-        budget : 10,
-    },
-    {
-        file: { label: "Training recording", icon: <VideoRegular /> },
-        author: { label: "John Doe", status: "away" },
-        lastUpdated: { label: "Yesterday at 1:45 PM", timestamp: 2 },
-        lastUpdate: {
-            label: "You recently opened this",
-            icon: <OpenRegular />,
-        },
-        budget : 10,
-    },
-    {
-        file: { label: "Purchase order", icon: <DocumentPdfRegular /> },
-        author: { label: "Jane Doe", status: "offline" },
-        lastUpdated: { label: "Tue at 9:30 AM", timestamp: 1 },
-        lastUpdate: {
-            label: "You shared this in a Teams chat",
-            icon: <PeopleRegular />,
-        },
-        budget : 10,
-    },
-];
 
-const columns = [
-    createTableColumn({
-        columnId: "name",
-        compare: (a, b) => {
-            return a.file.label.localeCompare(b.file.label);
-        },
-    }),
-    createTableColumn({
-        columnId: "description",
-        compare: (a, b) => {
-            return a.author.label.localeCompare(b.author.label);
-        },
-    }),
-    createTableColumn({
-        columnId: "organisateur",
-        compare: (a, b) => {
-            return a.lastUpdated.timestamp - b.lastUpdated.timestamp;
-        },
-    }),
-    createTableColumn({
-        columnId: "date",
-        compare: (a, b) => {
-            return a.lastUpdate.label.localeCompare(b.lastUpdate.label);
-        },
-    }),
-    createTableColumn({
-        columnId: "status",
-        compare: (a, b) => {
-            return a.lastUpdate.label.localeCompare(b.lastUpdate.label);
-        },
-    }),
-];
+
+
 const EventTable = () => {
+
+    const navigate = useNavigate();
+
+    const [page, setPage] = useState(0);
+    const [maxPages, setMaxPages] = useState(1);
+
+    const [items, setItems] = useState([
+        {
+            idEvent: 0,
+            name: "test",
+            description: "test test",
+            date: "test",
+            status: 10,
+        }
+    ]);
+
+    useEffect(() => {
+
+        axios.get("http://localhost:8080/api/v1/events", {
+            params: {
+                pageNumber: page,
+                pageSize: 15,
+            }
+        }).then(
+            response => {
+
+
+                setItems(response.data.map(event => ({
+                    idEvent: event.idEvent,
+                    name: event.name,
+                    description: event.description,
+                    date: event.date,
+                    status: event.status,
+                })))
+                setMaxPages(response.headers.get("total-pages"))
+
+            }
+        )
+
+    }, [page]);
+
+    const columns = [
+        createTableColumn({
+            columnId: "name",
+            compare: (a, b) => {
+                return a.name.localeCompare(b.name);
+            },
+        }),
+        createTableColumn({
+            columnId: "description",
+            compare: (a, b) => {
+                return a.description.localeCompare(b.description);
+            },
+        }),
+        createTableColumn({
+            columnId: "date",
+            compare: (a, b) => {
+                return a.date.localeCompare(b.date);
+            },
+        }),
+        createTableColumn({
+            columnId: "status",
+            compare: (a, b) => {
+                return a.status.localeCompare(b.status);
+            },
+        }),
+    ];
+
 
     const [sortState, setSortState] = React.useState({
         sortDirection: "ascending",
@@ -143,9 +143,6 @@ const EventTable = () => {
                             <TableHeaderCell {...headerSortProps("description")}>
                                 Description
                             </TableHeaderCell>
-                            <TableHeaderCell {...headerSortProps("organisateur")}>
-                                Organiser
-                            </TableHeaderCell>
                             <TableHeaderCell {...headerSortProps("date")}>
                                 Date
                             </TableHeaderCell>
@@ -155,40 +152,19 @@ const EventTable = () => {
                         </TableRow>
                     </TableHeader>
                     <TableBody>
-                        {rows.map(({ item }) => (
-                            <TableRow key={item.file.label}>
-                                <TableCell>
-                                    <TableCellLayout media={item.file.icon}>
-                                        {item.file.label}
-                                    </TableCellLayout>
-                                </TableCell>
-                                <TableCell>
-                                    <TableCellLayout
-                                        media={
-                                            <Avatar
-                                                aria-label={item.author.label}
-                                                name={item.author.label}
-                                                color={"colorful"}
-                                            />
-                                        }
-                                    >
-                                        {item.author.label}
-                                    </TableCellLayout>
-                                </TableCell>
-                                <TableCell>{item.lastUpdated.label}</TableCell>
-                                <TableCell>
-                                    <TableCellLayout media={item.lastUpdate.icon}>
-                                        {item.lastUpdate.label}
-                                    </TableCellLayout>
-                                </TableCell>
-                                <TableCell>{item.budget}</TableCell>
+                        {rows.map(({item}) => (
+                            <TableRow key={item.idEvent}>
+                                <TableCell>{item.name}</TableCell>
+                                <TableCell>{item.description}</TableCell>
+                                <TableCell>{moment(item.date).format("DD-MM-YYYY")}</TableCell>
+                                <TableCell>{item.status}</TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
                 </Table>
                 <div className={"flex gap-2 ml-auto self-end"}>
-                    <Button appearance={"primary"}>prev</Button>
-                    <Button appearance={"primary"}>next</Button>
+                    <Button appearance={"primary"} disabled={page === 0}  onClick={() =>setPage(prevState => (prevState-1))}>prev</Button>
+                    <Button appearance={"primary" } disabled={page+1 == maxPages} onClick={() =>setPage(prevState => (prevState+1))}>next</Button>
                 </div>
             </div>
         </div>

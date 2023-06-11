@@ -31,19 +31,16 @@ const EventDetailsPers = () => {
             <div className={"grid grid-cols-2 grid-rows-1 h-full w-full mt-4"}>
                     <div className={"flex flex-col gap-2 "}>
                         <Title3>Transactions</Title3>
-                        <FileCard fileName={"test file"} handleClick={()=> true} description={"Onedrive > Docs"}/>
-                        <FileCard fileName={"test file"} handleClick={()=> true} description={"Onedrive > Docs"}/>
-                        <FileCard fileName={"test file"} handleClick={()=> true} description={"Onedrive > Docs"}/>
-                        <FileCard fileName={"test file"} handleClick={()=> true} description={"Onedrive > Docs"}/>
-                        <FileCard fileName={"test file"} handleClick={()=> true} description={"Onedrive > Docs"}/>
-                        <FileCard fileName={"test file"} handleClick={()=> true} description={"Onedrive > Docs"}/>
-
+                        <FileCard fileName={"members.docx"} handleClick={()=> true} description={"Onedrive > Docs"}/>
+                        <FileCard fileName={"members.pdf"} handleClick={()=> true} description={"Onedrive > Docs"}/>
+                        <FileCard fileName={"members.pptx"} handleClick={()=> true} description={"Onedrive > Docs"}/>
+                        <FileCard fileName={"members.java"} handleClick={()=> true} description={"Onedrive > Docs"}/>
                     </div>
                 <div className={"flex flex-col gap-2 "}>
 
 
                         <Title3>Participants</Title3>
-                        <FileCard fileName={"test file"} handleClick={()=> true} description={"Onedrive > Docs"}/>
+                        <FileCard fileName={"members.xlsx"} handleClick={()=> true} description={"Now"}/>
 
                 </div>
             </div>

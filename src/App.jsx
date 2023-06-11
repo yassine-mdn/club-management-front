@@ -12,6 +12,7 @@ import EventTable from "./routes/Personnel/admin/EventTable.jsx";
 import PendingClubs from "./routes/Personnel/admin/PendingClubs.jsx";
 import PendingEvents from "./routes/Personnel/admin/PendingEvents.jsx";
 import ClubDetailsPers from "./routes/Personnel/common/ClubDetailsPers.jsx";
+import EventDetailsPers from "./routes/Personnel/common/EventDetailsPers.jsx";
 
 
 function App() {
@@ -41,11 +42,11 @@ function App() {
                 </Route>
                 <Route path={"event-list"}>
                     <Route index element={<EventTable/>}/>
-
+                    <Route path={":id"} element={<EventDetailsPers/>}/>
                 </Route>
                 <Route path={"pending-events"}>
                     <Route index element={<PendingEvents/>}/>
-
+                    <Route path={":id"} element={<EventDetailsPers/>}/>
                 </Route>
             </Route>
         </Routes>
