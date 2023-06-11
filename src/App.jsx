@@ -13,6 +13,7 @@ import PendingClubs from "./routes/Personnel/admin/PendingClubs.jsx";
 import PendingEvents from "./routes/Personnel/admin/PendingEvents.jsx";
 import ClubDetailsPers from "./routes/Personnel/common/ClubDetailsPers.jsx";
 import EventDetailsPers from "./routes/Personnel/common/EventDetailsPers.jsx";
+import ClubCreateFrom from './routes/Visitor/clubs/ClubCreateFrom';
 
 
 function App() {
@@ -20,8 +21,10 @@ function App() {
 
     return (
         <Routes>
+            
             <Route path={"/"} element={<UserContainer/>}>
                 <Route index element={<Home/>}/>
+                <Route path={"/createClub"} element={<ClubCreateFrom/>}/>
                 <Route path={"/clubs"}>
                     <Route index element={<ClubList/>}/>
                     <Route path={":id"} element={<ClubDetails/>}/>
