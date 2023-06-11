@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Stack, TextField, PrimaryButton } from "@fluentui/react";
 import { useNavigate } from "react-router-dom";
+import backgroundImg from "../../assets/uir_clubs.jpg";
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -16,13 +17,17 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <Stack
+    <div className="min-h-screen flex  items-center justify-center  bg-gray-100" >
+        <div  className="max-w-3xl   flex rounded-lg shadow-lg      ">
+        <Stack
         tokens={{ childrenGap: 20 }}
-        styles={{ width: 300 }}
-        className="bg-white p-6 rounded shadow"
+        
+        className="sm:w-1/2 rounded-lg bg-white  items-center p-6 "
       >
-        <h1 className="text-2xl font-bold">Login</h1>
+        
+        <img src="https://www.uir.ac.ma/assets/_resources/img/logos/logo-color.png" alt="Logo" className=" w-20 h-20 mb-4" />
+
+        
         <TextField
           label="Username"
           value={username}
@@ -34,9 +39,12 @@ const LoginPage = () => {
           value={password}
           onChange={(event, newValue) => setPassword(newValue)}
         />
-        <PrimaryButton text="Login" onClick={handleLogin} />
+        <PrimaryButton text="Login" className="bg-[#002D74]" onClick={handleLogin} />
       </Stack>
-    </div>
+      <img src="https://lh3.googleusercontent.com/p/AF1QipN8x1yRC3kwAWDlR0a5e_lHLWjmcLiHUBYGGllp=s1360-w1360-h1020" alt="Image" className="sm:block hidden w-1/2 rounded-r-lg " />
+    
+        </div>
+      </div>
   );
 };
 
