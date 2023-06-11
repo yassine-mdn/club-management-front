@@ -33,16 +33,18 @@ initializeFileTypeIcons();
 const FileCard = (props) => {
     const styles = useStyles();
 
+    const re = /(?:\.([^.]+))?$/;
+
     return (
         <div>
             <section className={"w-fit"}>
                 <Card className={styles.card}  orientation="horizontal">
                     <CardPreview className={"h-12 w-12 p-2"}>
-                        <Icon {...getFileTypeIconProps({ extension: 'pptx', size: 16 })} />
+                        <Icon {...getFileTypeIconProps({ extension: re.exec(props.fileName)[1].toString(), size: 16 })} />
                     </CardPreview>
 
                     <CardHeader
-                        header={<Subtitle1 as="h4" block className={"font-semibold"}>{props.fileName}</Subtitle1>}
+                        header={<Subtitle1 as="h4" block className={"font-semibold"}>{props.fileName.slice(0,props.fileName.indexOf('.'))}</Subtitle1>}
                         description={
                             <Caption1 className={styles.caption}>{props.description}</Caption1>
                         }

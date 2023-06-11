@@ -1,4 +1,4 @@
-import Sidebar from "../../components/sidebar/index.jsx";
+import Sidebar from "../../../components/sidebar/index.jsx";
 import {
     Archive24Filled,
     ChevronDown24Filled,
