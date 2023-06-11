@@ -13,6 +13,7 @@ import PendingClubs from "./routes/Personnel/admin/PendingClubs.jsx";
 import PendingEvents from "./routes/Personnel/admin/PendingEvents.jsx";
 import ClubDetailsPers from "./routes/Personnel/common/ClubDetailsPers.jsx";
 import EventDetailsPers from "./routes/Personnel/common/EventDetailsPers.jsx";
+import LoginPage from './routes/Visitor/LoginPage';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 
     return (
         <Routes>
+            <Route path={"/login"} element={<LoginPage/>}/>
             <Route path={"/"} element={<UserContainer/>}>
                 <Route index element={<Home/>}/>
                 <Route path={"/clubs"}>
