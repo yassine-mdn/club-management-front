@@ -69,7 +69,7 @@ const CreateClubForm = () => {
               onChange={(event, value) => handleChange('clubInfo.supervisor', value)}
             />
             {/* Additional fields for step 1 */}
-            <PrimaryButton text="Next" onClick={handleNextStep} />
+            <PrimaryButton text="Next" onClick={handleNextStep} className='w-48 self-end   bg-[#073567] rounded-lg'/>
           </>
         );
       case 1:
@@ -100,8 +100,11 @@ const CreateClubForm = () => {
               onChange={(event, value) => handleChange('committeeMembers.treasurer', value)}
             />
             {/* Additional fields for step 2 */}
-            <PrimaryButton text="Previous" onClick={handlePreviousStep} />
-            <PrimaryButton text="Next" onClick={handleNextStep} />
+            <div className='flex col justify-between'>
+            <PrimaryButton text="Previous" onClick={handlePreviousStep} className='w-48   bg-[#073567] rounded-lg' />
+            <PrimaryButton text="Next" onClick={handleNextStep} className='w-48  bg-[#073567] rounded-lg' />
+          
+            </div>
           </>
         );
       case 2:
@@ -111,8 +114,12 @@ const CreateClubForm = () => {
             <p>Upload the documents in different office formats:</p>
             {/* File upload fields */}
             {/* Additional fields for step 3 */}
-            <PrimaryButton text="Previous" onClick={handlePreviousStep} />
-            <PrimaryButton text="Submit" />
+            <div className='flex col justify-between'>
+            <PrimaryButton text="Previous" onClick={handlePreviousStep} className='w-48   bg-[#073567] rounded-lg' />
+            <PrimaryButton text="Submit"   className='w-48  bg-[#073567] rounded-lg' />
+          
+            </div>
+            
           </>
         );
       default:
