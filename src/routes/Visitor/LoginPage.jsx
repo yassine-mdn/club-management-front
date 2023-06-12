@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Stack, TextField, PrimaryButton } from "@fluentui/react";
 import { useNavigate } from "react-router-dom";
 
@@ -9,9 +9,13 @@ const LoginPage = () => {
 
   const handleLogin = () => {
     if (username === "admin" && password === "admin") {
-      navigate("/admin");
-    } else {
-      navigate("/");
+      navigate("/admin/club-list");
+    } else if (username === "prof" && password === "prof")  {
+      navigate("/prof/club-list");
+    }else if (username === "president" && password === "president")  {
+        navigate("/president/club-details");
+    }else{
+        navigate("/createClub");
     }
   };
 
