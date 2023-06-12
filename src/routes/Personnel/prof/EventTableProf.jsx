@@ -1,5 +1,6 @@
 import {
     Input,
+    Avatar,
     TableBody,
     TableCell,
     TableRow,
@@ -11,14 +12,18 @@ import {
     createTableColumn, Button,
 } from "@fluentui/react-components";
 import * as React from "react";
-import {Search20Filled} from "@fluentui/react-icons";
+import {
+    Search20Filled,
+} from "@fluentui/react-icons";
 import {useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
 import axios from "axios";
 import moment from "moment";
 
 
-const EventTable = () => {
+
+
+const EventTableProf = () => {
 
     const navigate = useNavigate();
 
@@ -40,7 +45,7 @@ const EventTable = () => {
         axios.get("http://localhost:8080/api/v1/events", {
             params: {
                 pageNumber: page,
-                pageSize: 15,
+                pageSize: 1,
             }
         }).then(
             response => {
@@ -95,7 +100,7 @@ const EventTable = () => {
 
     const {
         getRows,
-        sort: {getSortDirection, toggleColumnSort, sort},
+        sort: { getSortDirection, toggleColumnSort, sort },
     } = useTableFeatures(
         {
             columns,
@@ -119,8 +124,7 @@ const EventTable = () => {
     return (
         <div className={"flex flex-col gap-4 h-full overflow-hidden"}>
             <div className={"flex justify-between"}>
-                <Input contentBefore={<Search20Filled/>} size={"large"} type={"search"}
-                       style={{maxWidth: "800px", width: "600px"}}/>
+                <Input contentBefore={<Search20Filled/>} size={"large"} type={"search"} style={{maxWidth: "800px", width : "600px"}}/>
             </div>
             <div className={"flex flex-col justify-between h-full pt-4"}>
 
@@ -141,7 +145,7 @@ const EventTable = () => {
                     </TableHeader>
                     <TableBody>
                         {rows.map(({item}) => (
-                            <TableRow key={item.idEvent} onClick={() => navigate(`${item.idEvent}`)}>
+                            <TableRow key={item.idEvent} onClick={()=> navigate(`${item.idEvent}`)}>
                                 <TableCell>{item.name}</TableCell>
                                 <TableCell>{item.description}</TableCell>
                                 <TableCell>{moment(item.date).format("DD-MM-YYYY")}</TableCell>
@@ -151,14 +155,12 @@ const EventTable = () => {
                     </TableBody>
                 </Table>
                 <div className={"flex gap-2 ml-auto self-end"}>
-                    <Button appearance={"primary"} disabled={page === 0}
-                            onClick={() => setPage(prevState => (prevState - 1))}>prev</Button>
-                    <Button appearance={"primary"} disabled={page + 1 == maxPages}
-                            onClick={() => setPage(prevState => (prevState + 1))}>next</Button>
+                    <Button appearance={"primary"} disabled={page === 0}  onClick={() =>setPage(prevState => (prevState-1))}>prev</Button>
+                    <Button appearance={"primary" } disabled={page+1 == maxPages} onClick={() =>setPage(prevState => (prevState+1))}>next</Button>
                 </div>
             </div>
         </div>
     );
 };
 
-export default EventTable;
+export default EventTableProf;
