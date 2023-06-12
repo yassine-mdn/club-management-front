@@ -1,8 +1,10 @@
 import {useState} from "react";
 import {Button} from "@fluentui/react-components";
-import {NavLink} from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 
 const NavBar = () => {
+
+    const navigate = useNavigate();
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -57,7 +59,7 @@ const NavBar = () => {
 
                 </div>
                 <div className={"ml-auto"}>
-                    <Button appearance="primary"> Click me</Button>
+                    <Button appearance="primary" onClick={()=> navigate("/switch-user")}> Login</Button>
                 </div>
             </div>
         </nav>
