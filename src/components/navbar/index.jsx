@@ -59,7 +59,7 @@ const NavBar = () => {
 
                 </div>
                 <div className={"ml-auto"}>
-                    <Button appearance="primary" onClick={()=> navigate("/switch-user")}> Login</Button>
+                    <Button appearance="primary" onClick={()=> navigate("/login")}> Login</Button>
                 </div>
             </div>
         </nav>
