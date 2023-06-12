@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Stack, TextField, PrimaryButton } from "@fluentui/react";
 import { useNavigate } from "react-router-dom";
-import backgroundImg from "../../assets/uir_clubs.jpg";
 
 const LoginPage = () => {
   const navigate = useNavigate();
