@@ -105,7 +105,7 @@ const ClubDetailsPers = () => {
                                 <div className={"w-full flex flex-wrap gap-4"}>
                                     {
 
-                                        clubDetails.data?.data?.club?.committeeMembers.map((commitee) => (
+                                        clubDetails.data?.data?.club?.committeeMembers?.map((commitee) => (
                                             <div key={commitee.idA} className={"flex items-center gap-2 mb-4"}>
                                                 <Avatar size={48} color={"colorful"} name={`${commitee.firstName} ${commitee.lastName}`}/>
                                                 <div className={"flex flex-col gap-1"}>
@@ -119,7 +119,7 @@ const ClubDetailsPers = () => {
                                 <div className={"flex flex-col gap-2 "}>
                                     <Title3>Linked Files</Title3>
                                     {
-                                        clubDetails.data?.data.club.documents.map((doc) => (
+                                        clubDetails.data?.data?.club?.documents?.map((doc) => (
                                             <FileCard fileName={doc.name} handleClick={() => download(doc.idDocument,doc.name)}
                                                       description={doc.dateUpload} key={doc.idDocument}/>
                                         ))
